@@ -1,0 +1,96 @@
+.price
+  padding-bottom: 100px
+  &_block
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &_card
+      position: absolute
+      transition: 0.3s
+      height: 250px
+      z-index: -1
+      box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.05)
+      text-align: center
+      &_wrap
+        //position: absolute
+        display: flex
+        flex-direction: column
+        flex-basis: 24%
+        position: relative
+        overflow: hidden
+        min-height: 250px
+        margin-bottom: 10px
+        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.05)
+        &:hover
+          overflow: visible
+          cursor: pointer
+          .price_block_card
+            height: 325px
+            z-index: 2
+            background-color: #fff
+          .price_block_card_button
+            height: 57px
+            cursor: pointer
+            padding: 20px 45px
+           
+      &_text
+        margin: 24px 21px
+        display: flex
+        justify-content: space-between
+        .sqrt
+          +bold
+        span
+          font-size: 15px
+      &_button
+        transition: 0.3s
+        margin: 2px 22px 0 23px
+        max-width: 240px
+        height: 0
+        padding: 0
+        font-size: 14px
+
+@media (max-width: 1199px)
+  .price
+    &_block
+      &_card
+        text-align: center
+        &:hover
+        max-width: 230px
+        .price_block_card_button
+          padding: 0 15px !important
+        &_button
+          margin-bottom: 0
+        &_text
+          span
+            font-size: 13px
+        &_wrap
+          min-height: 210px
+@media (max-width: 991px)
+  .price
+    padding-bottom: 60px
+    &_block
+      &_card
+        max-width: none
+        box-shadow: none
+        &_wrap
+           margin-bottom: 30px
+           flex-basis: 48%
+           height: 325px
+        &_button
+          height: 57px
+        &_text
+          span
+            font-size: 15px
+        
+@media (max-width: 576px)
+  .price
+    padding-bottom: 20px
+    &_block
+      &_card
+        max-width: none
+        box-shadow: none
+        &_wrap
+           margin-bottom: 30px
+           flex-basis: 98%
+           align-items: center
+

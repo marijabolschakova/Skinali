@@ -1,0 +1,80 @@
+.rewiews
+  //position: relative
+  padding-bottom: 300px
+  background-color: $bg-secondary
+  &_slider //rewiews_slider_wrap
+    display: flex
+    justify-content: space-between
+    &_arrows
+      display: none
+      position: absolute
+      z-index: 0
+      justify-content: space-between
+      top: 50%
+      width: 90%
+      margin: auto
+      transform: translate(5%,-620%)
+    &_wrap
+      //max-width: 100%
+      position: relative
+    &_item
+      text-align: center
+    &_text
+      font-size: 15px
+      position: relative
+      font-style: italic
+      background-color: #fff
+      max-width: 370px
+      height: 135px
+      line-height: 20px
+      padding: 20px
+      border-radius: 10px
+      margin: auto
+      &:after
+        content: ''
+        position: absolute
+        width: 0
+        height: 0
+        border: 10px solid transparent
+        border-top: 5px solid #ffffff
+        bottom: -15px
+        left: 50%
+        transform: translateX(-50%)
+    &_img
+      display: block
+      width: 70px
+      height: 70px
+      border: 2px solid #6a99e9
+      border-radius: 50% 
+      margin: 30px auto
+  .slick-list
+    width: 100%
+
+.slick-track
+  display: flex
+  justify-content: space-around
+
+@media (max-width: 1025px)
+  .rewiews
+    &_slider
+      &_arrows
+        display: flex
+@media (max-width: 768px)
+  .rewiews
+    &_slider
+      &_text
+        max-width: 320px
+        height: 155px
+      &_wrap
+        margin: auto
+        position: relative
+      &_arrows
+        display: none
+
+@media (max-width: 576px)
+  .rewiews
+    &_slider
+      &_text
+        font-size: 15px
+        max-width: 320px
+        height: 175px

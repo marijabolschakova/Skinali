@@ -1,0 +1,81 @@
+.footer
+  background: #262626
+  color: #ffffff
+  &_block
+    padding-top: 40px
+    display: flex
+    justify-content: space-between
+    
+  &_description
+    flex-basis: 25%
+    &_text
+      font-size: 12px
+      margin-bottom: 49px
+      span
+        display: block
+        font-size: 18px
+        +bold
+        text-transform: uppercase
+    &_small
+      font-size: 14px
+      display: block
+      margin-bottom: 40px
+      color: #767676
+  &_pay-info
+    max-width: 295px
+    flex-wrap: wrap
+    flex-basis: 30%
+    display: flex
+    align-items: center
+    height: 34px
+    justify-content: space-around
+  &_contacts
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    a
+      text-decoration: none
+      color: #ffffff
+      display: block
+      margin-bottom: 16px
+    &_tel
+      font-size: 20px
+      +bold
+    &_mail
+      font-size: 16px
+      border-bottom: 1px solid #5c5c5c
+    &_img
+      text-align: right
+      width: 100%
+    
+      
+
+@media (max-width: 768px)
+  .footer
+    &_block
+      flex-direction: column
+      align-items: center
+      text-align: center
+    &_description
+      &_text
+        margin: 20px 0
+        span
+          display: block
+          margin-bottom: 7px
+    &_pay-info
+      width: 100%
+      flex-wrap: wrap
+      //flex-basis: 50%
+      display: flex
+      align-items: center
+      height: 34px
+      justify-content: space-around
+      margin-bottom: 20px
+      img
+        display: block
+    &_contacts
+      align-items: center
+      &_img
+        text-align: center
+      
+        

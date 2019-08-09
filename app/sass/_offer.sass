@@ -1,0 +1,92 @@
+.offer
+   padding: 129px 0
+   &-block
+      background: #fff url('../img/offer/form-bg.png') no-repeat center right
+      background-size: contain
+      padding: 80px
+      box-shadow: 0 15px 25px rgba(0,0,0,0.1)   
+      margin-top: -200px
+   &_title
+      font-size: 25px
+      text-transform: uppercase
+      +bold
+      margin-bottom: 20px
+   &_subtitle
+      display: block
+      font-size: 21px
+      margin-bottom: 48px
+.form
+   &_row
+      display: flex
+      align-items: center
+      max-width: 900px
+      margin-bottom: 25px
+      &:last-child
+         margin-bottom: 0
+   &_lable
+      font-size: 17px
+      display: block
+      margin-bottom: 15px
+   &_group
+      flex-basis: 33.334%
+   &_input
+      width: 100%
+      border-right-width: 0px
+      &:last-child 
+         border-right-width: 1px
+   &_button
+      height: 80px
+      width: 100%
+
+.select:after 
+    content: ''
+    position: absolute
+    top: 50%
+    -webkit-transform: translateY(-50%)
+    transform: translateY(-50%)
+    right: 20px
+    width: 20px
+    height: 10px
+    background-image: url(../img/down-arrow.png)
+
+@media (max-width: 1199px)
+   .offer
+      &-block
+         background-position: center right -140px
+         margin-top: -300px
+      
+@media (max-width: 768px)
+   .offer
+      &-block
+         background: none
+         background-color: #fff
+         padding: 40px
+         margin-top: -300px
+   .form
+      &_row
+         flex-direction: column
+         &-checkbox
+            flex-direction: row
+      &_group
+         flex-basis: 100%
+         width: 100%
+      &_input
+         margin-bottom: 20px
+@media (max-width: 425px)
+   .offer
+      &_title
+         font-size: 20px
+      &_subtitle
+         font-size: 18px
+@media (max-width: 350px)
+   .offer
+      &-block
+         margin-top: -350px
+   .form
+      &_row
+         flex-direction: column
+         align-items: flex-start
+      &_checkbox
+         margin-bottom: 10px
+      &_button
+         font-size: 12px

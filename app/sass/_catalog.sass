@@ -1,0 +1,101 @@
+.catalog
+  background-color: $bg-secondary
+  padding-bottom: 100px
+  &_block
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &_item
+      //flex-basis: 50%
+      position: relative
+      margin-bottom: 30px
+      box-shadow: 7px 5px 21px rgba(0,0,0,0.1)
+      max-height: 130px
+      max-width: 570px
+      overflow: hidden
+      &:hover
+        cursor: pointer 
+        .catalog_block_item_buttons
+          width: 245px
+          right: 0
+          //z-index: 1
+      &_text
+        position: absolute
+        padding: 10px
+        margin: 10px
+        background-color: rgba(80,127,225,0.6)
+        font-size: 12px
+        text-transform: uppercase
+        color: #ffffff
+        +bold
+      &_img
+        max-width: 570px
+        height: 130px
+      &_buttons
+        position: absolute
+        right: 0
+        top: 101px
+        display: flex
+        transition: 0.2s
+        width: 0
+        //display: none
+        //z-index: -1
+.catalog_button
+  height: 29px
+  border: none
+  padding: 10px
+  background-color: #fff
+  font-size: 11px
+  text-transform: uppercase
+  &:hover
+    cursor: pointer
+.fitting_button
+  min-width: 140px
+  color: #6a99e9
+  &:focus
+    outline: none
+.add_button
+  background-color: #6a99e9
+  color: #fff
+  &:focus
+    outline: none
+.like_button
+  background-color: #417cde
+  &_active
+    background-color: #FB0055
+  &:focus
+    outline: none
+
+.catalog_ending
+  text-align: center
+  &_button
+    display: block
+    margin: 50px auto 25px auto
+    max-width: 350px
+    padding: 30px
+  &_text
+    font-size: 16px
+@media (max-width: 1199px)
+  .catalog
+    //padding-top: 20px
+    &_block
+      justify-content: space-between
+      &_item
+        max-width: 470px
+@media (max-width: 991px)
+  .catalog
+    &_block
+      justify-content: center
+      &_item
+        max-width: 570px
+@media (max-width: 576px)
+  .catalog_block_item_buttons
+          width: 245px
+          right: 0
+  .catalog_ending
+    &_button
+      font-size: 12px
+      padding: 25px 25px
+      margin-top: 10px
+    &_text
+      font-size: 12px

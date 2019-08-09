@@ -1,0 +1,108 @@
+.navbar
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background-color: #fff
+    z-index: 99
+    &_wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+    
+    &_mobile, &_landline 
+        text-align: right
+    &_phone
+        font-size: 19px
+        +bold
+        display: block
+        text-decoration: none
+        color: $text-color
+        margin-bottom: 5px
+    &_small-text
+        +light
+        font-size: 14px
+        color: $text-color-light
+        text-decoration: none
+        display: block
+.menu
+    position: fixed
+    top: 80px
+    width: 100%
+    left: 0
+    padding: 16px 0
+    background-color: $button-0-color
+    color: #fff
+    transition: 0.3s
+    opacity: 0
+    transform: translateY(-200%)
+    &__active
+        transform: translateY(0)
+        opacity: 1
+    &_nav
+        display: flex
+        align-items: center
+        justify-content: space-around
+    &-button
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        background-color: transparent
+        border: none
+        border-right: 1px solid #ede6f8
+        border-left: 1px solid #ede6f8
+        height: 80px
+        width: 70px
+        &:focus
+            outline: none
+        &:hover
+            cursor: pointer
+        &_line
+            display: block
+            width: 20px
+            height: 3px
+            background-color: #5986e3
+            margin: 2px 0px   
+            border-radius: 2px
+    &_link  
+        text-transform: uppercase
+        text-decoration: none
+        font-size: 17px
+        color: #ffffff
+
+.logo
+    &_text
+        font-size: 18px
+        text-transform: uppercase
+        display: block
+        +bold
+        margin-bottom: 5px
+    &_discription
+        font-size: 14px
+        color: $text-color-light
+        display: block
+
+@media (max-width: 991px)
+    .navbar
+        &_mobile, &_landline 
+            display: none
+
+    .menu_link
+        font-size: 12px
+
+@media (max-width: 576px)
+    .logo
+         display: none
+    .menu
+        top: 60px
+        //height: 60px
+        z-index: 2
+        &_nav
+            flex-direction: column
+        &_link
+            margin-bottom: 20px
+            font-size: 17px
+        &-button
+            height: 60px
+

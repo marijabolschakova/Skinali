@@ -1,0 +1,77 @@
+.before
+  padding-bottom: 100px
+  &_slider
+    &_wrap
+      max-width: 640px
+      margin: auto
+      position: relative
+    &_item
+    &_arrows
+      position: absolute
+      display: flex
+      z-index: 0
+      justify-content: space-between
+      top: 50%
+      width: 100%
+      transform: translateY(-620%)
+    &_dots
+      display: flex
+      //margin: auto
+      justify-content: center
+      list-style: none
+      width: 100%
+      height: 10px
+      padding: 0
+      margin-top: 30px
+      //
+      li
+        background-color: #d1d1d1
+        width: 10px
+        height: 10px
+        margin: 5px
+        border-radius: 50%
+        &.slick-active
+          background-color: #5b7fda
+        &:hover
+          cursor: pointer
+      button
+        display: none
+  
+
+.arrow
+  background-color: transparent
+  border: none
+  transform: translateY(0%)
+  &:focus
+    outline: none
+  &:hover
+    cursor: pointer
+  &-left
+    transform: translate(-130%, 500%)
+    &_bot
+      transform: translate(-130%, 500%)
+  &-right
+    transform: translate(130%, 500%)
+    &_bot
+      transform: translate(130%, 500%)
+
+.twentytwenty-handle
+  z-index: 99
+
+@media (max-width: 576px)
+  .before
+    &_slider
+      &_arrows
+        transform: translateY(250%)
+
+  .arrow
+    &-left
+      transform: translate(50%, 70%)
+    &-right
+      transform: translate(-50%, 70%)
+
+
+.before_slider_dots_bl
+  display: flex
+  position: absolute
+  bottom: -70px
